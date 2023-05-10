@@ -1,0 +1,432 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+img,h1,h2,h3,h4,p{
+    margin: 0;
+}
+
+ /* headings related css including humburger  */
+header{
+   background-color: azure;
+    
+   
+}
+li{
+    list-style: none;
+}
+a{
+    color: black;
+    text-decoration: none;
+}
+.navbar{
+    min-height: 5em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 24px;
+   
+}
+
+.nav-menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2em;
+  
+}
+.nav-branding{
+    font-size: 2rem;
+}
+.nav-link{
+    transition: 0.7s ease;
+}
+.nav-link:hover{
+    color: dodgerblue;
+}
+.hamburger{
+    display:none;
+    cursor: pointer;
+}
+.bar{
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: black;
+}
+
+
+ 
+
+header h3{
+    margin: 0;
+    align-self: center;
+    width: 173px;
+}
+
+.header-icon{
+    display: flex;
+    gap: 1em;
+
+    
+}
+.header-icon img{
+  
+       object-fit: contain;
+       justify-self: center;
+       
+       
+}
+.header-icon-detail{
+    display: flex;
+    gap:1em;
+    
+}
+.show-menu{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+
+.header-paragraph
+{
+   font-weight: 400;
+   line-height: 2em;
+   size: 1em;
+}
+
+/* The section which has an image as a background */
+
+.main-img{
+    margin: 0;
+    padding: 4em 2em 0 2em;
+    background-image: url(images/blog-image.png);
+    height: 300px;
+    max-width: 100%;
+    background-size: cover;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+}
+.main-img h1{
+    max-width: 100%;
+}
+
+.blog-one,.blog-two,.blog-three{
+    margin: 2em 2em 3em 2em;
+    display: flex;
+    flex-direction: column;
+    gap:1em;
+    
+}
+.blog-four,.blog-five,.blog-six{
+    display: none;
+}
+.show-blocks{
+    margin: 2em 2em 3em 2em;
+    display: flex;
+    flex-direction: column;
+    gap:1em;
+}
+.btn-name-toggle{
+
+}
+article img{
+    width: 100%;
+}
+article h3{
+    font-weight: 700;
+    font-size: 2em;
+}
+.view-more {
+    text-decoration: underline;
+    border: none;
+    background-color: white;
+    font-weight: 700;
+    display: block;
+    font-size: 1.5em;
+    
+    width: auto;
+    margin: 30px auto;
+
+}
+
+footer {
+    display: flex;
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 3em 4em;
+    flex-direction: column;
+    gap: 1em;
+}
+
+
+/* About me css codes  */
+
+.intro-aboutme{
+    margin: 2em 2em 2em 2em;
+    display: flex;
+    flex-direction: column;
+    gap:1em;
+}
+.name-intro{
+    display: flex;
+    flex-direction: column;
+    gap:1em;
+}
+.name-intro h1{
+    font-weight: 700;
+}
+.name-intro p{
+    margin-bottom: 2em;
+    line-height: 1.5;
+    white-space: pre-wrap;
+}
+br{
+    margin-bottom: 1em;
+    margin-top: 1em;
+}
+.name-intro img{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-bottom: 1.5em;
+}
+.intro-detail{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    justify-content: start;
+    align-items: start;
+   
+}
+.intro-detail h3{
+    margin: 1em 0;
+}
+.recent-post-aboutme{
+    text-align: center;
+    margin-top: 2em;
+}
+
+
+   /* This css is for detail.html file */
+       
+   .top-detials,.detail-main{
+    display: flex;
+    flex-direction: column;
+    margin: 2em 2em 3em 2em;
+    gap:1em;
+   }
+
+   .detail-img{
+    grid-area: imagx;
+    width: 100%;
+    background-size: cover;
+    margin: 2em 2em 3em 2em;
+  }
+  .container-flex{
+    margin: 3em 0;
+  }
+   
+    /* media queries for the codes for mobile views */
+
+
+  @media(max-width:767px){
+    .hamburger{
+        display: inline-block;
+    }
+    .hamburger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    .nav-menu{
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        gap: 0;
+        flex-direction: column;
+        background-color: white;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+
+    }
+    .nav-item{
+        margin: 16px 0;
+        color: black;
+    }
+    .nav-menu.active{
+        left: 0;
+        margin-bottom: 4em;
+
+    }
+    .navbar{
+        margin: 1px auto;
+       
+        border: 2em solid transparent;
+    }
+
+    .date-detail{
+       display: flex;
+       flex-direction: column;
+       gap: 1em;
+        margin: 2em 2em;
+    }
+    .detail-img{
+        margin: 2em 2em;
+        width: 80%;
+        height: auto;
+    }
+    .main-img{
+       height: auto;
+    }
+    .header-paragraph{
+        margin-bottom: 2em;
+    }
+    .inner-intro{
+        display: flex;
+        flex-direction: column;
+        gap: 2em;
+        align-self: center;
+        
+        
+    }
+    .main-img:hover{
+        cursor: pointer;
+      }
+}
+   
+    
+   /* Media query for the larger screen */
+@media(min-width:767px){
+    body{
+        background-color: white;
+    }
+    .main-img{
+      
+        max-width: 100%;
+        height: 500px;
+       gap:1em;
+        justify-content: end;
+       
+        
+        
+     
+    }
+    .main-img p{
+        margin-bottom: 2em;
+        width: 70%;
+    }
+    .main-img h1{
+        width: 100%;
+        line-height: 1.5;
+    }
+    .grid-view{
+        margin: 0 3em;
+        display: grid;
+        grid-template-columns: repeat(3,auto);
+    }
+    .blog-four,.blog-five,.blog-six{
+        margin: 2em 2em 3em 2em;
+    display: flex;
+    flex-direction: column;
+    gap:1em;
+    }
+
+    /* This one is for the About-me.html when increase size */
+    .name-intro{
+       flex-direction: row;
+       gap: 2em;
+      
+       margin: 1em 7em 0 0;
+    }
+    .inner-intro{
+        display: flex;
+        flex-direction: column;
+        gap: 2em;
+        align-self: center;
+        
+        
+    }
+    .intro-detail{
+        margin: 1em 3em 3em 5em;
+        justify-self: center;
+    }
+    .intro-aboutme{
+        margin-top: 6em;
+        
+    }
+      /* This one is for the detail.html when increase size */
+      .intro-detial{
+        /* background-color: blueviolet; */
+        display: grid;
+        grid-template-columns: 2em 2em auto 2em 4.5em;
+        grid-template-areas: 
+        ". . head . ."
+        ". imagx imagx imagx ."
+        ". .footer . . ";
+    
+      }
+      .date-detail{
+        margin-right: 4em;
+        grid-area: head;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 2em;
+        
+        /* background-color: aqua; */
+      }
+       .date-detail p{
+       max-width: 100%;
+       }
+      .detail-img{
+        grid-area: imagx;
+        width: 100%;
+        background-size: cover;
+        margin-top: 2em;
+        
+       
+      }
+      .detail-main{
+        grid-area: footer;
+      }
+
+
+
+
+     
+      .container-flex{
+        margin: 3em 0;
+      }
+      .navbar{
+        margin: 0 1em;
+      }
+      .main-img:hover{
+        cursor: pointer;
+      }
+}
+
+
+
+
+
