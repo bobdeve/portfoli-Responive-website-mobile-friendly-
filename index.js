@@ -6,7 +6,25 @@ const hamburger =document.querySelector(".hamburger");
 const navmenu= document.querySelector(".nav-menu")
 const mainContainer = document.querySelector(".main-container")
 const imageHomecontainer = document.querySelector(".main-img")
+const blog1 = document.getElementById("blog-1")
+let blogs = document.querySelectorAll(".blogs")
 
+//  blog1.addEventListener("click", function(){
+//     window.open("https://celadon-pithivier-139612.netlify.app/", '_blank');
+//  })
+blogs.forEach((div)=>{
+    div.addEventListener("click", function(){
+     let blogUrl =  (div.id === "blog-0") ? "https://bobdeve.github.io/Quizapp/": 
+                   (div.id === "blog-1") ? "https://celadon-pithivier-139612.netlify.app/":
+                   (div.id === "blog-2")? "https://fanciful-kheer-9622ad.netlify.app/":
+                   (div.id === "blog-3")? "https://bobdeve.github.io/tenzies-app/":
+                   (div.id === "blog-4") ? "https://merry-chaja-afde48.netlify.app/":
+                   (div.id === "blog-5") ? "https://cerulean-donut-b47ac7.netlify.app/":
+                   "https://serene-bubblegum-66c8e3.netlify.app/"
+
+                   window.open(blogUrl, '_blank');
+    })
+})
 viewMoreButton.addEventListener('click', function(){
       
     for (let i = 0; i < arrayofBlogs.length; i++) {
